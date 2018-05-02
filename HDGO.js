@@ -153,13 +153,13 @@ new page.Route(PREFIX + ":play:(.*)", function(page, data) {
     page.loading = false;
 });
 //
-new page.Route(PREFIX + ":search:(.*)", function(page, query) {
+/*new page.Route(PREFIX + ":search:(.*)", function(page, query) {
     page.metadata.icon = LOGO;
     page.metadata.title = 'Search results for: ' + query;
     page.type = 'directory';
     browse.search(page, query, 'serials');
     browse.search(page, query, 'films');
-});
+});*/
 //
 page.Searcher(PREFIX + " - Сериалы", LOGO, function(page, query) {
     browse.search(page, query, 'serials');
@@ -175,9 +175,9 @@ new page.Route(PREFIX + ":start", function(page) {
     page.metadata.title = "HDGO";
     page.metadata.icon = LOGO;
 
-    page.appendItem(PREFIX + ":search:", 'search', {
+    /*page.appendItem(PREFIX + ":search:", 'search', {
         title: 'Search'
-    });
+    });*/
     page.appendItem(PREFIX + ':browse:/serials:Сериалы', 'directory', {
         title: 'Сериалы'
     });
